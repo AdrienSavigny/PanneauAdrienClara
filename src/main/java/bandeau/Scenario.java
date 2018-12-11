@@ -5,10 +5,27 @@
  */
 package bandeau;
 
+
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author adrie
  */
 public class Scenario {
     
+    List<Effet> myEffets = new LinkedList<>();
+    
+    public void addEffet(Effet e, int r){
+        for(int i=0; i<r;i++)
+        myEffets.add(e);
+    }
+    
+    public void playScenario(Bandeau b){
+        for(Effet effet : myEffets){
+            effet.playOn(b);
+        }
+    }
+           
 }

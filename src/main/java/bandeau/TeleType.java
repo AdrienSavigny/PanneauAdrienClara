@@ -10,5 +10,15 @@ package bandeau;
  * @author bonne
  */
 public class TeleType {
+    private final String myMessage;
+    private final int myDelay;
     
+    public TeleType(String message, int delay) {
+        myMessage=message;
+        myDelay=delay;
+    }
+    
+    public void playOn(Bandeau b){
+        
+    }
 }

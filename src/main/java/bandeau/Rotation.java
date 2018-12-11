@@ -12,19 +12,28 @@ package bandeau;
 public class Rotation extends Effet {
     
     private final Bandeau monBandeau = new Bandeau();
-   
-    public Rotation(){
-        this.message=message;        
-        
+    public String message; 
+    public double angle;
+    public double angleactuel;
+
+    public Rotation(String message, Double angle) {
+        super(message);
+        this.angle= angle;
     }
-    public void PlayOn(Bandeau b, int delay){
-        monBandeau.setMessage("On va tourner");
-		monBandeau.sleep(delay);
-		monBandeau.setMessage("On tourne...");
+   
+    public void PlayOn(String message, Bandeau b, int delay){
+        monBandeau.setMessage(message);
+        angleactuel=monBandeau.getRotation();
 		for (int i = 0; i <= 100; i++) {
-			monBandeau.setRotation(2*Math.PI*i / 100);
+			monBandeau.setRotation(angleactuel+angle *Math.PI*i / 1800);
+                        monBandeau.sleep(100);
 			monBandeau.sleep(delay);
     }
     
 }
+
+    @Override
+    public void playOn(Bandeau b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

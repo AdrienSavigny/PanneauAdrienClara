@@ -11,4 +11,5 @@ package bandeau;
  */
 public class Scenario {
     
+   
 }

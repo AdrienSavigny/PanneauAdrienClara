@@ -15,9 +15,9 @@ public class Rainbow extends Effet {
 
     private final Bandeau monBandeau = new Bandeau();
     
-    String message;
-    public Rainbow(){
-        this.message=message;
+    
+    public Rainbow(String message){
+        super(message);
     }
     
     public void PlayOn(Bandeau b, int delay){
@@ -34,6 +34,11 @@ public class Rainbow extends Effet {
                 monBandeau.setBackground(Color.RED);
                 monBandeau.sleep(delay);
 		monBandeau.setBackground(Color.ORANGE);
+    }
+
+    @Override
+    public void playOn(Bandeau b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
             
     

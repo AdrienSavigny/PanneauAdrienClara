@@ -5,26 +5,25 @@
  */
 package bandeau;
 
-import java.awt.Color;
+import java.awt.Font;
 
 /**
  *
  * @author bonne
  */
-public class Clignotement {
+public class Zoom {
     private final String myMessage;
     private final int myDelay;
     
-    public Clignotement(String message, int delay) {
+    public Zoom(String message, int delay) {
         myMessage=message;
         myDelay=delay;
     }
     
     public void playOn(Bandeau b){
-            String message=b.getMessage();
-            b.setMessage("");
+        for (int i = 5; i < 60 ; i+=5) {
+            b.setFont(new Font("Dialog", Font.BOLD, 5+i));
             b.sleep(myDelay);
-            b.setMessage(message);
-            b.sleep(myDelay);
+	}
     }
 }

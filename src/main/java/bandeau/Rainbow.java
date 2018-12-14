@@ -13,33 +13,32 @@ import java.awt.Color;
  */
 public class Rainbow extends Effet {
 
-    private final Bandeau monBandeau = new Bandeau();
+    public int delay;
     
     
-    public Rainbow(String message){
+    public Rainbow(String message, int delay){
         super(message);
+        this.delay=delay;
     }
     
-    public void PlayOn(Bandeau b, int delay){
-                monBandeau.setMessage("On va changer de couleur");
-		monBandeau.sleep(delay);
-		monBandeau.setBackground(Color.WHITE);
-		monBandeau.sleep(delay);
-		monBandeau.setForeground(Color.YELLOW);
-		monBandeau.sleep(delay);
-		monBandeau.setBackground(Color.BLUE);
-                monBandeau.sleep(delay);
-                monBandeau.setBackground(Color.GREEN);
-                monBandeau.sleep(delay);
-                monBandeau.setBackground(Color.RED);
-                monBandeau.sleep(delay);
-		monBandeau.setBackground(Color.ORANGE);
-    }
 
     @Override
     public void playOn(Bandeau b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        b.setMessage("On va changer de couleur");
+		b.sleep(delay);
+		b.setBackground(Color.WHITE);
+		b.sleep(delay);
+		b.setForeground(Color.YELLOW);
+		b.sleep(delay);
+		b.setBackground(Color.BLUE);
+                b.sleep(delay);
+                b.setBackground(Color.GREEN);
+                b.sleep(delay);
+                b.setBackground(Color.RED);
+                b.sleep(delay);
+		b.setBackground(Color.ORANGE);
     }
+
             
     
 }

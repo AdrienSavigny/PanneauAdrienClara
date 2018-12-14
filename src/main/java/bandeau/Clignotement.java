@@ -5,26 +5,25 @@
  */
 package bandeau;
 
-import java.awt.Color;
-
 /**
  *
  * @author bonne
  */
-public class Clignotement {
-    private final String myMessage;
-    private final int myDelay;
+public class Clignotement extends Effet{
+    public String message;
+    public int myDelay;
     
     public Clignotement(String message, int delay) {
-        myMessage=message;
+        super(message);
         myDelay=delay;
     }
     
+    @Override
     public void playOn(Bandeau b){
-            String message=b.getMessage();
+            String myMessage=b.getMessage();
             b.setMessage("");
             b.sleep(myDelay);
-            b.setMessage(message);
+            b.setMessage(myMessage);
             b.sleep(myDelay);
     }
 }

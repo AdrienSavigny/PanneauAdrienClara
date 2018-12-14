@@ -5,23 +5,26 @@
  */
 package bandeau;
 
+import java.awt.Color;
 import java.awt.Font;
 
 /**
  *
  * @author bonne
  */
-public class Zoom {
-    private final String myMessage;
-    private final int myDelay;
+public class Zoom extends Effet {
+    public String message;
+    public int myDelay;
     
     public Zoom(String message, int delay) {
-        myMessage=message;
+        super(message);
         myDelay=delay;
     }
     
+    @Override
     public void playOn(Bandeau b){
         for (int i = 5; i < 60 ; i+=5) {
+
             b.setFont(new Font("Dialog", Font.BOLD, 5+i));
             b.sleep(myDelay);
 	}

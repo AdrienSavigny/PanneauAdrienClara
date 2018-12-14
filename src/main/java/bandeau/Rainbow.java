@@ -24,7 +24,6 @@ public class Rainbow extends Effet {
 
     @Override
     public void playOn(Bandeau b) {
-        b.setMessage("On va changer de couleur");
 		b.sleep(delay);
 		b.setBackground(Color.WHITE);
 		b.sleep(delay);
@@ -37,6 +36,8 @@ public class Rainbow extends Effet {
                 b.setBackground(Color.RED);
                 b.sleep(delay);
 		b.setBackground(Color.ORANGE);
+                b.sleep(delay);
+                b.setBackground(Color.BLACK);
     }
 
             

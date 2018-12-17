@@ -16,7 +16,7 @@ public class Rotation extends Effet {
         super(message);
     }
    
-
+// Permet de réaliser une rotation global d'un message texte selon un certain angle choisi
     @Override
     public void playOn(Bandeau b) {
 		for (int i = 0; i <= 100; i++) {

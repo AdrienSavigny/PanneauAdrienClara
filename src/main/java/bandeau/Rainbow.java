@@ -21,13 +21,13 @@ public class Rainbow extends Effet {
         this.delay=delay;
     }
     
-
+//Permet de changer la couleur du fond "background" du message 
     @Override
     public void playOn(Bandeau b) {
 		b.sleep(delay);
 		b.setBackground(Color.WHITE);
 		b.sleep(delay);
-		b.setForeground(Color.YELLOW);
+		b.setBackground(Color.YELLOW);
 		b.sleep(delay);
 		b.setBackground(Color.BLUE);
                 b.sleep(delay);
@@ -35,9 +35,7 @@ public class Rainbow extends Effet {
                 b.sleep(delay);
                 b.setBackground(Color.RED);
                 b.sleep(delay);
-		b.setBackground(Color.ORANGE);
-                b.sleep(delay);
-                b.setBackground(Color.BLACK);
+                b.setBackground(Color.WHITE);
     }
 
             

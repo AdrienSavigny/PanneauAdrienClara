@@ -14,7 +14,7 @@ public class ExempleDUtilisation {
     public void exemple() {
         
 
-        String myMessage="Bandeau Publicitaire";
+        String myMessage="Bandeau publicitaire";
         
         monBandeau.setMessage(myMessage);
         monBandeau.setBackground(Color.white);

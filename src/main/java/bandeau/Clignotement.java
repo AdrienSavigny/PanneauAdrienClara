@@ -18,7 +18,7 @@ public class Clignotement extends Effet{
         myDelay=delay;
     }
     
-    //Permet de réaliser un clignotement sur le texte
+    //Permet de réaliser un clignotement sur le message
     @Override
     public void playOn(Bandeau b){
             String myMessage=b.getMessage();

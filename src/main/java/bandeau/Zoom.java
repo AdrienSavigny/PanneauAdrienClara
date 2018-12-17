@@ -21,6 +21,7 @@ public class Zoom extends Effet {
         myDelay=delay;
     }
     
+    //Permet de réaliser un zoom sur le texte
     @Override
     public void playOn(Bandeau b){
         for (int i = 5; i < 60 ; i+=5) {
